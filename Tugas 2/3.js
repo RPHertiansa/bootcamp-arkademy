@@ -1,10 +1,14 @@
 function printSegitiga(num) {
-    for (let i = num; i >= 1; i--) {
-        let item = ''
-        for (let j = 1; j <= i; j++) {   
-            item += j;
+    if (typeof(num)=='number') {
+        for (let i = num; i >= 1; i--) {
+            let item = ''
+            for (let j = 1; j <= i; j++) {   
+                item += j;
+            }
+            console.log(item)
         }
-        console.log(item)
+    } else {
+        console.log('Input harus number')
     }
 }
 printSegitiga(5);

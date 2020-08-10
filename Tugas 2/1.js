@@ -1,6 +1,6 @@
 const biodata = {
     name: 'Reynaldi Putra Hertiansa',
-    age: '23',
+    age: 23,
     hobbies: ['nonton film', 'musik'],
     isMarried: false,
     schoolList: [{

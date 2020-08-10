@@ -18,5 +18,5 @@ function rerata(mat, ind, ing, ipa) {
 };
 
 //masukkan nilai disini
-rerata(80, 90, 89, 69);
-rerata(100, 98, 96, 90);
+rerata(83, 92, 82, 80);
+rerata(100, 98, 900);
