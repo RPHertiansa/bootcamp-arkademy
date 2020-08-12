@@ -8,11 +8,16 @@
 
 function seleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
     if (nilaiAwal < nilaiAkhir) {
-        dataArray.sort(function(a, b){return a-b});
         if (dataArray.length >= 5) {
-            console.log(dataArray.filter(num => (nilaiAwal <= num && num <= nilaiAkhir)));
+            dataArray.sort(function(a, b){return a-b});
+            let filtered = dataArray.filter(num => (nilaiAwal <= num && num <= nilaiAkhir));
+            if (filtered.length > 0) {
+                console.log (filtered)
+            } else {
+                console.log('Angka tidak ditemukan')
+            }
         } else {
-            console.log('Jumlah angka dalam dataArray tidak ada')
+            console.log('Jumlah angka dalam dataArray kurang dari 5')
         }
     } else {
         console.log('Nilai akhir harus lebih besar dari nilai awal')
@@ -23,3 +28,4 @@ function seleksiNilai(nilaiAwal, nilaiAkhir, dataArray) {
 seleksiNilai(5, 20 , [2, 25, 4, 14, 17, 30, 8])
 seleksiNilai(15, 3 , [2, 25, 4, 14, 17, 30, 8])
 seleksiNilai(5, 17 , [2, 25, 4])
+seleksiNilai(5, 17 , [2, 25, 4, 26, 30])

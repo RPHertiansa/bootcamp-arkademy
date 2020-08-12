@@ -8,15 +8,13 @@ let name = [
 'Deirdre', 'Diana', 'Elizabeth',
 'Ella', 'Faith', 'Olivia', 'Penelope']
 
-const searchName = (word, num, limit) => {
-    const names = name.filter(name => name.includes(word))
-    console.log(limit(names, num))
+const searchName = (word, num, getResult) => {
+    const names = name.filter(name => name.toLowerCase().includes(word.toLowerCase()))
+    const sorted = names.slice(0, num);
+    getResult(sorted); 
 }
-const limit = (names, num) => {
-    return names.filter((tes, i) => {
-        if(i < num) {
-            return true
-        }
-    })
+
+const getResult = (sorted) => {
+    console.log(sorted)
 }
-searchName('an', 10, limit);
+searchName('an', 5, getResult);
