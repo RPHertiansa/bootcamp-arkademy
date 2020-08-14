@@ -11,5 +11,16 @@ const getMonth = (callback) => {
         } else {
             callback(new Error('Sorry Data Not Found', []))
         }
-    }, 4000);
+    },1000);
 };
+
+const callback = (error, month) => {
+    if (!error) {
+        let x = month.map(a=>a)
+        console.log(x)
+    } else {
+        console.log(error)
+    }
+}
+
+getMonth(callback);

@@ -16,14 +16,15 @@ const cekHariKerja = (day) => {
         }, 1000);
     });
 };
-cekHariKerja()
+cekHariKerja(item)
 .then((response) => {
     console.log(`Terpenuhi. Hari ini adalah ${response}`)
 })
 .catch((error) => {
     console.log(`Tidak Terpenuhi, karena hari ini ${error}`)
 });
-console.log(cekHariKerja('senin'));
+cekHariKerja('senin')
+
 
 
 
