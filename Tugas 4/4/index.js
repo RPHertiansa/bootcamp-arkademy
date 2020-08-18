@@ -6,7 +6,6 @@
 const fetch =  require('node-fetch')
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(respond => respond.json())
-    .then(json => (json))
     .then(json => json.map(x => {
         console.log(x.name)
     }))

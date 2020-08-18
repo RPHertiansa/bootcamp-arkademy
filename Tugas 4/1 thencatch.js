@@ -16,7 +16,7 @@ const cekHariKerja = (day) => {
         }, 1000);
     });
 };
-cekHariKerja('sabtu')
+cekHariKerja('senin')
 .then((response) => {
     console.log(`Terpenuhi. Hari ini adalah ${response}`)
 })

@@ -1,30 +1,30 @@
-//Buatlah 2 program bebas dengan menggunakan promise seperti soal nomor 1
+// //Buatlah 2 program bebas dengan menggunakan promise seperti soal nomor 1
 
-//Cek bilangan ganjil dan genap
-const cekGanjilGenap = (num) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (num % 2 == 0) {
-                resolve(num)
-            } else {
-                reject(num)
-            }
-        }, 1000);
-    });
-};
+// //Cek bilangan ganjil dan genap
+// const cekGanjilGenap = (num) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (num % 2 == 0) {
+//                 resolve(num)
+//             } else {
+//                 reject(num)
+//             }
+//         }, 1000);
+//     });
+// };
 
-const displayAngka = async(num) => {
-    try {
-        const hasil = await cekGanjilGenap(num)
-        console.log(`${hasil} adalah bilangan Genap`)
-    } catch (error) {
-        console.log(`${error} adalah bilangan Ganjil`)
-    } finally {
-        console.log("Selesai.")
-    }
-};
-displayAngka(1);
-displayAngka(2);
+// const displayAngka = async(num) => {
+//     try {
+//         const hasil = await cekGanjilGenap(num)
+//         console.log(`${hasil} adalah bilangan Genap`)
+//     } catch (error) {
+//         console.log(`${error} adalah bilangan Ganjil`)
+//     } finally {
+//         console.log("Selesai.")
+//     }
+// };
+// displayAngka(1);
+// displayAngka(2);
 
 
 //cek waktu dan mengembalikan salam
