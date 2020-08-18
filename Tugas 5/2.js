@@ -5,3 +5,4 @@ const reverseWord = (word) => {
 }
 
 reverseWord("saya belajar javascript");
+reverseWord("selamat pagi selamat siang")
