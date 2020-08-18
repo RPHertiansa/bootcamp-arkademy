@@ -9,6 +9,6 @@ function cekPalindrom(str) {
     }
     console.log('palindrom');
   }
-  cekPalindrom('1Malam1');
-  let r=[2,3,4,5,6,6];
-  console.log(r)
+cekPalindrom('1Malam1');
+cekPalindrom('siang');
+cekPalindrom('a race car a')
