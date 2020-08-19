@@ -13,7 +13,6 @@
 //Validasi input berupa angka
 //Pisahkan barisan angka berdasarkan angka 0
 //Urutkan bilangan di antara angka 0
-//Kembalikan angka 0 pada barisan bilangan
 //Cetak barisan bilangan yang telah diurutkan
 //Selesai
 
