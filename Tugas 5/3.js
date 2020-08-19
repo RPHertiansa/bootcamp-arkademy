@@ -8,29 +8,27 @@
 //Output: 55566914566956
 
 //Pseudocode
+//Mulai
 //Masukkan barisan bilangan
 //Validasi input berupa angka
 //Pisahkan barisan angka berdasarkan angka 0
 //Urutkan bilangan di antara angka 0
 //Kembalikan angka 0 pada barisan bilangan
 //Cetak barisan bilangan yang telah diurutkan
+//Selesai
 
 const divideAndSort = (num) => {
     if (typeof num === 'number') {
         let numToString = num.toString().split("0"); //mengubah jadi array, memisahkan berdasarkan 0
-        console.log(numToString.join(""))
-        let sortedNumber = numToString.map(x => {
-            let [z] = x
-            console.log(z)
-            // let zzz = Number(x);
-            // let aaa = zzz;
-            // console.log(aaa);
+        
+        let result = ''
+        
+        numToString.map(x => { //array sudah dipisahkan dari 0, diurutkan pada masing-masing index    
+            let sorted = x.split("").sort().join("")
+            result += sorted              
         });
-
-        //console.log(sortedNumber)
-        // let a = numToString.sort(function(a, b){return a-b})
-        // let joinedNumber = a.join("");
-        // console.log(joinedNumber)
+        
+        console.log(result)
     } else {
         console.log('Input harus angka')
     }
