@@ -27,8 +27,9 @@ const divideAndSort = (num) => {
             let sorted = x.split("").sort().join("")
             result += sorted              
         });
-        
-        console.log(result)
+        let numbers = parseInt(result)
+
+        console.log(numbers)
     } else {
         console.log('Input harus angka')
     }
