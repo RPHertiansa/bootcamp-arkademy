@@ -21,19 +21,19 @@ const divideAndSort = (num) => {
     if (typeof num === 'number') {
         let numToString = num.toString().split("0"); //mengubah jadi array, memisahkan berdasarkan 0
         
-        let result = ''
+        let result = '';
         
         numToString.map(x => { //array sudah dipisahkan dari 0, diurutkan pada masing-masing index    
-            let sorted = x.split("").sort().join("")
+            let sorted = x.split("").sort().join("");
             result += sorted              
         });
-        let numbers = parseInt(result)
 
-        console.log(numbers)
+        let displayResult = Number(result); //ubah string ke number
+        console.log(displayResult);
     } else {
         console.log('Input harus angka')
     }
-}
+};
 
 divideAndSort(5956560159466056); //55566914566956
 divideAndSort(5010251030405); //51125345
