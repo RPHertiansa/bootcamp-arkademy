@@ -1,0 +1,16 @@
+body {
+    background-color: rgba(190, 195, 202, 0.3);
+}
+@font-face {
+    font-family: 'AirbnbCerealBook';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../assets/font/AirbnbCerealBook.woff') format('woff');
+}
+
+* {
+    font-family:'AirbnbCerealBook';
+}
+ .price{
+     font-weight: bold;
+ }
