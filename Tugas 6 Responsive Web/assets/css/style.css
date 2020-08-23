@@ -23,11 +23,32 @@ main {
     filter: contrast(0.8);
 }
 
-.checkout{
+.add-item, .checkout{
    text-align: left;
    font-weight: bold; 
 }
 
+.cancel-btn{
+    background-color: #F24F8A !important;
+    color: #ffffff !important;
+}
+
+.blue-btn{
+    background-color: #57CAD5 !important;
+    color: #ffffff !important;
+}
+
+.blue-btn:hover,
+.cancel-btn:hover{
+    filter: brightness(1.05) !important;
+    
+}
+.form-control{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
+}
+.form-button{
+    align-items: right !important;
+}
 /* The sidebar menu */
 .sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */

@@ -4,4 +4,5 @@ Tugas bootcamp Arkademy
 - Tugas 2 : Basic Javascript 1 ( Tipe data, variable)
 - Tugas 3 : Basic Javascript 2 (function, method, callback)
 - Tugas 4 : Basic Javascript 3 (async, promise, fetch)
-- Tugas 5 : Code implement
+- Tugas 5 : Code implement (logic)
+- Tugas 6 : Responsive Web (HTML, CSS, Bootstrap)

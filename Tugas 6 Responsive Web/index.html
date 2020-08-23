@@ -10,23 +10,28 @@
 </head>
 <body>
     <header>
-        
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid row">
             <div class="container">
-            <a class="navbar-brand" href="#">Food Item</a>
-            <button class="navbar-toggler ml-auto" type="button btn-white" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <form class="form-inline ml-auto">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
-          
-                <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
-                
-                </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-success">
+                    <div class="container">
+                    <a class="navbar-brand" href="#">Food Item</a>
+                    <button class="navbar-toggler ml-auto" type="button btn-white" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <form class="form-inline ml-auto">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                  
+                        <div class="collapse navbar-collapse bg-light" id="navbarSupportedContent">
+                        
+                        </div>
+                    </div>
+                </nav>
             </div>
-        </nav>
+          
+        </div>
+        
         <!-- Side navigation
 <div class="sidenav">
     <a href="#">About</a>
@@ -39,22 +44,22 @@
   <!-- <div class="main">
     ...
   </div> -->
-</header>
+    </header>
 
     <main>
         
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-1" style="background-color: #ffffff;">
+                <div class="col-1" style="background-color: #dddddd;">
                     
                 </div>
-                <div class="col-sm-7">
+                <div class="col-7">
                     
                     <div class="container-fluid">
                         
                         <div class="row">
                             <div class="col-sm-4">
-                                <img src="assets/img/espresso.png" class="img-fluid" data-toggle="modal" data-target="#exampleModal">
+                                <img src="assets/img/espresso.png" class="img-fluid" data-toggle="modal" data-target="#add-item-modal">
                                 <p>Espresso <br> <strong>Rp 10.000</strong></p>                   
                             </div>
                             <div class="col-sm-4">
@@ -92,17 +97,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 aside">
+                <div class="col-4 aside">
                     <div>
                         <img src="./assets/img/teacup.png" alt="">
                         <h3 style="font-weight: bold;">Your cart is empty</h3>
                         <p style="color: lightgray;">Please add some items from the menu</p>
                     </div>
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkout-modal">
+                    <button type="button" class="btn blue-btn" data-toggle="modal" data-target="#checkout-modal">
                         Checkout
                     </button> <br> <br>
-                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn cancel-btn" data-toggle="modal" data-target="#exampleModal">
                         Cancel
                     </button>
                     
@@ -112,23 +117,62 @@
                         <div class="modal-content">
                             
                             <div class="container">
+
+                                <div class="modal-body">
                                 <h5 class="modal-title checkout" id="exampleModalLabel">Checkout</h5>
                                 <p>Cashier: Pevita Pearce</p>
-                                
-                                
-                                <div class="modal-body">
+              
                                 <p>Coffee latte 1x</p>
                                 <p>Black Forest 1x</p>
                                 <p>Salmon Truffle Teriyaki 1x</p>
                                 <p>PPN 10%</p>
                                 <p>Payment: Cash</p>
+         
+                                <button type="button" class="btn blue-btn">Print</button>
+                                <p>or</p>
+                                <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
+                                </div>
+                            </div>
+                            
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- Add Item Modal  -->
+                    <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            
+                            <div class="container">
+                                <div class="modal-body add-item">
+                                <h5 class="modal-title add-item" id="exampleModalLabel">Add Item</h5><br>
+                                    <form>
+                                        <div class="form-group row">
+                                          <label for="exampleFormControlInput1" class="col-sm-3">Name</label>
+                                          <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="exampleFormControlInput1" class="col-sm-3">Image</label>
+                                            <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="exampleFormControlInput1" class="col-sm-3">Price</label>
+                                            <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                                          </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-3"for="exampleFormControlSelect1">Category</label>
+                                          <select class="col-sm-9 form-control" id="exampleFormControlSelect1">
+                                            <option>Food</option>
+                                            <option>Beverage</option>
+                                          </select>
+                                        </div>
+                                    </form>          
+                                    <div class="form-button">
+                                        <button type="button"  style="align-items: right !important;"class="btn cancel-btn" data-dismiss="modal">Cancel</button>
+                                        <button type="button"  style="align-items: right !important;"class="btn blue-btn">Add</button>
+                                    </div>
                                 </div>
                                 
-                                
-                                
-                                <button type="button" class="btn btn-primary">Print</button>
-                                <p>or</p>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                                 </div>
                             
                             </div>
