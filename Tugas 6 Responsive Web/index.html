@@ -12,10 +12,10 @@
 <body>
     <header>
         <div class="container-fluid row">
-            <div class="container">
+            <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
                     <div class="container">
-                    <a class="navbar-brand" href="#">Food Item</a>
+                    <a class="navbar-brand" href="index.html">Food Item</a>
                     <button class="navbar-toggler ml-auto" type="button btn-white" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
@@ -23,13 +23,14 @@
                         <ul class="navbar-nav ml-auto">
                             <li>
                             <form class="form-inline ml-auto">
-                                <input class="form-control mr-sm-2" type="search" placeholder="" aria-label="Search">
+                                
                                 <button class="btn  my-2 my-sm-0" type="submit">
                                     <i class="fa fa-search" aria-hidden="true"></i>
                                 </button>
                             </form>
                             </li>
                         </ul>
+                        <a class="navbar-brand" href="index.html">Cart 0</a>
                     </div>
    
                     </div>
@@ -55,16 +56,20 @@
 
     <main>
         
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-1" style="background-color: #dddddd;">
-                    <a href=""><img src="./assets/img/fork.png" alt=""></a>
-                    <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
+                <div class="col-md-1 col-sm-12 text-center" style="background-color: #dddddd;">
+                    <button type="button" class="btn">
+                        <a href=""><img src="./assets/img/fork.png" alt=""></a>
+                    </button>
+                    <button type="button" class="btn">
+                        <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
+                    </button>
                     <button type="button" class="btn" data-toggle="modal" data-target="#add-item-modal">
                         <i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i>
                     </button><br>
                 </div>
-                <div class="col-7">
+                <div class="col-md-7 col-sm-12">
                     
                     <div class="container">
                         
@@ -108,7 +113,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-4 aside">
+                <div class="col-md-4 cl-sm-12 aside">
                     <div>
                         <img src="./assets/img/teacup.png" alt="">
                         <h3 style="font-weight: bold;">Your cart is empty</h3>
@@ -131,6 +136,7 @@
 
                                 <div class="modal-body">
                                 <h5 class="modal-title checkout" id="exampleModalLabel">Checkout</h5>
+                               
                                 <p>Cashier: Pevita Pearce</p>
               
                                 <p>Coffee latte 1x</p>
@@ -140,7 +146,7 @@
                                 <p>Payment: Cash</p>
          
                                 <button type="button" class="btn blue-btn btn-block">Print</button>
-                                <p>or</p>
+                                <p class="text-center">or</p>
                                 <button type="button" class="btn cancel-btn btn-block" data-dismiss="modal">Cancel</button>
                                 </div>
                             </div>
@@ -178,7 +184,7 @@
                                           </select>
                                         </div>
                                     </form>          
-                                    <div class="form-button">
+                                    <div class="form-button text-right">
                                         <button type="button"  style="align-items: right !important;"class="btn cancel-btn" data-dismiss="modal">Cancel</button>
                                         <button type="button"  style="align-items: right !important;"class="btn blue-btn">Add</button>
                                     </div>
