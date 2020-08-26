@@ -51,8 +51,8 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .cart-num {
-    height: 105px !important;
-    width: 105px !important;
+    
+    padding: 5px 10px !important;
     background-color: turquoise !important;
     border-radius: 50% !important;
     
