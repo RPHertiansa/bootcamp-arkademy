@@ -49,27 +49,19 @@
                 <div class="col-md-8">
                     
                     <div class="row">
-                        <div class="col-md-11 col-sm-5">
-                            <h1>Food Item</h1>  
+                        <div class="col-md-12 col-sm-6">
+                            <h1>Food Item</h1>
                         </div>
-                        <div class="col-md-1 col-sm-1">
-                            <i class="fa fa-search fa-2x" aria-hidden="true"></i>
-                        </div>
-                        <div class="text-center col-md-1 col-sm-6 text-center" style="background-color: #dddddd;">
-                            <center>
-                                <button type="button" class="btn">
-                                    <a href=""><img src="./assets/img/fork.png" alt=""></a>
-                                </button>
-                                <button type="button" class="btn">
-                                    <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
-                                </button>
-                                <button type="button" class="btn">
-                                    <a href="" data-toggle="modal" data-target="#add-item-modal">
-                                        <i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i>
-                                    </a>
-                                </button>
-                            </center>
-      
+                        <div class="text-center col-md-1 col-sm-6 " style="background-color: #dddddd;">
+                            
+                                <a href=""><img src="./assets/img/fork.png" alt=""></a>
+                            
+                            
+                                <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
+                            
+                            
+                                <a href="" data-toggle="modal" data-target="#add-item-modal"><i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i></a>
+                                
                             
                         </div>
                         <div class="col-md-11 col-sm-12">
@@ -77,39 +69,39 @@
                             <div class="container">
                                 
                                 <div class="row">
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/espresso.png" class="img-fluid" data-toggle="modal" data-target="#add-item-modal">
                                         <p>Espresso <br> <strong>Rp 10.000</strong></p>                   
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/latte.png" class="img-fluid">
                                         <p>Coffee Latte <br> <strong>Rp 15.000</strong></p>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/cappucino.png" class="img-fluid">
                                         <p>Cappucino <br> <strong>Rp 5.000</strong></p>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/redvelvet.png" class="img-fluid">
                                         <p>Red Velvet Latte <br> <strong>Rp 33.000</strong></p>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/chocorum.png" class="img-fluid">
                                         <p>Choco Rum <br> <strong>Rp 28.000</strong></p>
                                     </div>        
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/blackforest.png" class="img-fluid">
                                         <p>Black Forest <br> <strong>Rp 30.000</strong></p>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/chickenkatsu.png" class="img-fluid">
                                         <p>Chicken Katsu Dabu-dabu <br> <strong>Rp 60.000</strong></p>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/salmon.png" class="img-fluid">
                                         <p>Salmon Truffle Teriyaki <br> <strong>Rp 60.000</strong></p>
                                     </div>
-                                    <div class="col-sm-6 col-md-4">
+                                    <div class="col-sm-4">
                                         <img src="assets/img/wiener.png" class="img-fluid">
                                         <p>Wiener Schnitzel <br> <strong>Rp 69.000</strong></p>
                                     </div>     
@@ -121,12 +113,76 @@
                 </div>
                 <div class="col-md-4 col-sm-12 aside">
                     <h1>Cart</h1>
-                    <div>
-                        <img src="./assets/img/teacup.png" alt="">
-                        <h3 style="font-weight: bold;">Your cart is empty</h3>
-                        <p style="color: lightgray;">Please add some items from the menu</p>
-                    </div>
+                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn blue-btn btn-block" data-toggle="modal" data-target="#checkout-modal">
+                        Checkout
+                    </button> <br> <br>
+                    <button type="button" class="btn cancel-btn btn-block" data-toggle="modal" data-target="#exampleModal">
+                        Cancel
+                    </button>
+                    
+                    
+                </div>
 
+
+                
+            </div>
+        </div>
+
+        <!-- Checkout Modal  -->
+        <div class="modal fade  checkout" id="checkout-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                
+                <div class="container">
+
+                    <div class="modal-body checkout">
+                    <table class="table table-borderless">
+                        <thead>
+                          <tr>
+                            <th scope="col">Checkout <br>Cashier: Pevita Pearce</th>
+                            <th scope="col" class="text-right">Receipt no: #010410919</th>      
+                          </tr>
+                         
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Coffee latte 1x</td>
+                            <td class="text-right">Rp 15.000</td>
+                          </tr>
+                          <tr>
+                            <td>Black Forest 1x</td>
+                            <td class="text-right">Rp 30.000</td>
+                          </tr>
+                          <tr>
+                            <td>Salmon Truffle Teriyaki 1x</td>
+                            <td class="text-right">Rp 60.000</td>
+                          </tr>
+                          <tr>
+                            <td>PPN 10%</td>
+                            <td class="text-right">Rp 10.500</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" class="text-right" >Total: Rp 115.000</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2">Payment: Cash</td>
+                          </tr>
+                       
+                         
+                        </tbody>
+                      </table>
+
+                    <button type="button" class="btn blue-btn btn-block">Print</button>
+                    <p class="text-center">or</p>
+                    <button type="button" class="btn cancel-btn btn-block" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div> 
 
         <!-- Add Item Modal  -->
         <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

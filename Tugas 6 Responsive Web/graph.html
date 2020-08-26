@@ -4,54 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-   
+
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!--Chart JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css" rel="stylesheet">
     <title>POS App</title>
 </head>
 <body>
     <header>
-        <div class="container-fluid row">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-                    <div class="container">
-                    <a class="navbar-brand" href="index.html">Food Item</a>
-                    <button class="navbar-toggler ml-auto" type="button btn-white" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li>
-                            <form class="form-inline ml-auto">
-                                
-                                <button class="btn  my-2 my-sm-0" type="submit">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </form>
-                            </li>
-                        </ul>
-                        <a class="navbar-brand" href="index.html">Cart 0</a>
-                    </div>
-   
-                    </div>
-                    
-                </nav>
-            </div>
-          
-        </div>-
-        
-        <!-- Side navigation
-<div class="sidenav">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
-  </div>
-  
-  <!-- Page content -->
-  <!-- <div class="main">
-    ...
-  </div> -->
+        <a href="index.html" style="text-decoration: none; text-align: center !important; color: black;">
+            <h2>History</h2>
+        </a>
     </header>
 
     <main>
@@ -69,36 +36,29 @@
                     </button><br>
                 </div>
                 <div class="col-md-11 col-sm-12">
-                    <div class="row container-fluid">
-                        <div class="row mx-auto text-center">
-                            <div style="background-image: url(./assets/img/pink.png);" class="card mx-2 col-sm-3">
+                    <div class="container-fluid">
+                        <div class="row" style="font-weight: bold;">
+                            <div style="background-image: url(./assets/img/pink.png);" class="card col-md-3 mx-auto">
                                 <p>Today's income</p>
-                                <h3>Rp. 1.000.000</h3>
+                                <p style="font-size: 150%;">Rp. 1.000.000</p>
                                 <p>+2% Yesterday</p>
                             </div>
-                            <div style="background-image: url(./assets/img/blue.png);" class="card mx-2 col-sm-3">
+                            <div style="background-image: url(./assets/img/blue.png);" class="card col-md-3 mx-auto">
                                 <p>Orders</p>
-                                <h3>3.270</h3>
+                                <p style="font-size: 150%;">3.270</p>
                                 <p>+5% Last Week</p>
                             </div>
-                            <div style="background-image: url(./assets/img/purple.png);" class="card mx-2 col-sm-3">
+                            <div style="background-image: url(./assets/img/purple.png);" class="card col-md-3 mx-auto">
                                 <p>This Year's income</p>
-                                <h3>Rp. 100.000.000.000</h3>
+                                <p style="font-size: 150%;">Rp. 100.000.000.000</p>
                                 <p>+10% Last Year</p>
                             </div>
                         </div>
-                        <div class="row col-sm-12">
-                            <div style="background-color:red ;"class="col-sm-4">
-                                <h1>graph</h1>
-                            </div>
-                            <div style="background-color:red ;"class="col-sm-4">
-                                <h1>graph</h1>
-                            </div>
-                            <div style="background-color:red ;"class="col-sm-4">
-                                <h1>graph</h1>
-                            </div>
+                        <div class=" col-sm-8 col-md-12 h-75 graph">
+                            <h1>Revenue</h1>
+                            <canvas id="myChart"></canvas>
                         </div>
-                        <div class="col-sm-12">
+                        <div class="col-sm-8 col-md-12">
                             <table class="table">
                                 <thead>
                                   <tr>
@@ -111,7 +71,7 @@
                                 </thead>
                                 <tbody>
                                   <tr>
-                                    <th scope="row">#10289</th>
+                                    <td>#10289</td>
                                     <td>Cashier 1</td>
                                     <td>28 October 2019</td>
                                     <td>Ice Tea, Salad</td>
@@ -126,6 +86,7 @@
         </div>     
 
         <!-- Add Item Modal  -->
+        
         <div class="modal fade" id="add-item-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -144,17 +105,17 @@
                             </div>
                             <div class="form-group row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Price</label>
-                                <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                                <input class="form-control col-sm-7" id="exampleFormControlInput1" placeholder="">
                               </div>
                             <div class="form-group row">
                               <label class="col-sm-3"for="exampleFormControlSelect1">Category</label>
-                              <select class="col-sm-9 form-control" id="exampleFormControlSelect1">
+                              <select class="col-sm-5 form-control" id="exampleFormControlSelect1">
                                 <option>Food</option>
                                 <option>Beverage</option>
                               </select>
                             </div>
                         </form>          
-                        <div class="form-button text-right">
+                        <div class="text-right">
                             <button type="button"  style="align-items: right !important;"class="btn cancel-btn" data-dismiss="modal">Cancel</button>
                             <button type="button"  style="align-items: right !important;"class="btn blue-btn">Add</button>
                         </div>
@@ -164,11 +125,12 @@
                 
                 </div>
             </div>
-        </div>
+        </div> 
     </main>
     <footer>
 
     </footer>
+    <script src="./assets/js/script.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
