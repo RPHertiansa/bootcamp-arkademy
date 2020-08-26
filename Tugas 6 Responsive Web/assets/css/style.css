@@ -5,9 +5,14 @@
     src: url('../../assets/font/AirbnbCerealBook.woff') format('woff');
 }
 
-
+.product {
+    background: rgba(190, 195, 202, 0.3);
+}
 
 * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     font-family:'AirbnbCerealBook';
 }
 
@@ -41,6 +46,18 @@
     filter: brightness(1.05) !important;
     
 }
-.form-control, .table, .graph{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
+
+.shadow{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.cart-num {
+    height: 105px !important;
+    width: 105px !important;
+    background-color: turquoise !important;
+    border-radius: 50% !important;
+    
+   
+}
+.container {
+    justify-content: center !important;
 }

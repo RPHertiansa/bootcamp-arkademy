@@ -10,38 +10,6 @@
     <title>POS App</title>
 </head>
 <body>
-    <!-- <header>
-        <div class="container-fluid row">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-                    <div class="container">
-                    <a class="navbar-brand" href="index.html">Food Item</a>
-                    <button class="navbar-toggler ml-auto" type="button btn-white" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li>
-                            <form class="form-inline ml-auto">
-                                
-                                <button class="btn  my-2 my-sm-0" type="submit">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </form>
-                            </li>
-                        </ul>
-                        <a class="navbar-brand" href="index.html">Cart 0</a>
-                    </div>
-   
-                    </div>
-                    
-                </nav>
-            </div>
-          
-        </div>
-        
-    </header> -->
-
     <main>
         
         <div class="container-fluid">
@@ -49,30 +17,23 @@
                 <div class="col-md-8">
                     
                     <div class="row">
-                        <div class="col-md-11 col-sm-5">
-                            <h1>Food Item</h1>  
+                        <div class="col-md-12 col-sm-6 shadow row text-center">
+                            <h1 style="text-align: center !important; ">Food Item</h1>
+                            <i class="fa fa-search fa-2x ml-auto my-auto" aria-hidden="true"></i>  
                         </div>
-                        <div class="col-md-1 col-sm-1">
-                            <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                       
+                        <div class="col-md-1 col-sm-12 shadow text-left">
+                            <button type="button" class="btn">
+                                <a href="addtocart.html"><img src="./assets/img/fork.png" alt=""></a>
+                            </button>
+                            <button type="button" class="btn">
+                                <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
+                            </button>
+                            <button type="button" class="btn" data-toggle="modal" data-target="#add-item-modal">
+                                <i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i>
+                            </button><br>
                         </div>
-                        <div class="text-center col-md-1 col-sm-6 text-center" style="background-color: #dddddd;">
-                            <center>
-                                <button type="button" class="btn">
-                                    <a href=""><img src="./assets/img/fork.png" alt=""></a>
-                                </button>
-                                <button type="button" class="btn">
-                                    <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
-                                </button>
-                                <button type="button" class="btn">
-                                    <a href="" data-toggle="modal" data-target="#add-item-modal">
-                                        <i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i>
-                                    </a>
-                                </button>
-                            </center>
-      
-                            
-                        </div>
-                        <div class="col-md-11 col-sm-12">
+                        <div class="col-md-11 col-sm-12 product">
                             
                             <div class="container">
                                 
@@ -119,8 +80,8 @@
                     </div>
 
                 </div>
-                <div class="col-md-4 col-sm-12 aside">
-                    <h1>Cart</h1>
+                <div class="col-md-4 col-sm-12 aside shadow">
+                    <h1>Cart <span class="cart-num">0</span></h1>
                     <div>
                         <img src="./assets/img/teacup.png" alt="">
                         <h3 style="font-weight: bold;">Your cart is empty</h3>
@@ -139,19 +100,19 @@
                         <form>
                             <div class="form-group row">
                               <label for="exampleFormControlInput1" class="col-sm-3">Name</label>
-                              <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                              <input class="form-control shadow col-sm-9" id="exampleFormControlInput1" placeholder="">
                             </div>
                             <div class="form-group row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Image</label>
-                                <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                                <input class="form-control shadow col-sm-9" id="exampleFormControlInput1" placeholder="">
                             </div>
                             <div class="form-group row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Price</label>
-                                <input class="form-control col-sm-7" id="exampleFormControlInput1" placeholder="">
+                                <input class="form-control shadow  col-sm-7" id="exampleFormControlInput1" placeholder="">
                               </div>
                             <div class="form-group row">
                               <label class="col-sm-3"for="exampleFormControlSelect1">Category</label>
-                              <select class="col-sm-5 form-control" id="exampleFormControlSelect1">
+                              <select class="col-sm-5 form-control shadow" id="exampleFormControlSelect1">
                                 <option>Food</option>
                                 <option>Beverage</option>
                               </select>

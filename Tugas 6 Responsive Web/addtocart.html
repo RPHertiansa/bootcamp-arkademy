@@ -10,38 +10,6 @@
     <title>POS App</title>
 </head>
 <body>
-    <!-- <header>
-        <div class="container-fluid row">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-                    <div class="container">
-                    <a class="navbar-brand" href="index.html">Food Item</a>
-                    <button class="navbar-toggler ml-auto" type="button btn-white" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li>
-                            <form class="form-inline ml-auto">
-                                
-                                <button class="btn  my-2 my-sm-0" type="submit">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </button>
-                            </form>
-                            </li>
-                        </ul>
-                        <a class="navbar-brand" href="index.html">Cart 0</a>
-                    </div>
-   
-                    </div>
-                    
-                </nav>
-            </div>
-          
-        </div>
-        
-    </header> -->
-
     <main>
         
         <div class="container-fluid">
@@ -49,59 +17,67 @@
                 <div class="col-md-8">
                     
                     <div class="row">
-                        <div class="col-md-12 col-sm-6">
-                            <h1>Food Item</h1>
+                        <div class="col-md-11 col-4">
+                            <h1>Food Item</h1>  
                         </div>
-                        <div class="text-center col-md-1 col-sm-6 " style="background-color: #dddddd;">
-                            
-                                <a href=""><img src="./assets/img/fork.png" alt=""></a>
-                            
-                            
-                                <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
-                            
-                            
-                                <a href="" data-toggle="modal" data-target="#add-item-modal"><i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i></a>
-                                
+                        <div class="col-md-1 col-1">
+                            <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="text-center col-md-1 col-7 text-center" style="background-color: #dddddd;">
+                            <center>
+                                <button type="button" class="btn">
+                                    <a href="addtocart.html"><img src="./assets/img/fork.png" alt=""></a>
+                                </button>
+                                <button type="button" class="btn">
+                                    <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
+                                </button>
+                                <button type="button" class="btn">
+                                    <a href="" data-toggle="modal" data-target="#add-item-modal">
+                                        <i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i>
+                                    </a>
+                                </button>
+                            </center>
+      
                             
                         </div>
-                        <div class="col-md-11 col-sm-12">
+                        <div class="col-md-11 col-sm-12 product">
                             
                             <div class="container">
                                 
                                 <div class="row">
-                                    <div class="col-sm-4">
-                                        <img src="assets/img/espresso.png" class="img-fluid" data-toggle="modal" data-target="#add-item-modal">
+                                    <div class="col-sm-6 col-md-4">
+                                        <img src="assets/img/espresso.png" class="img-fluid">
                                         <p>Espresso <br> <strong>Rp 10.000</strong></p>                   
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/latte.png" class="img-fluid">
                                         <p>Coffee Latte <br> <strong>Rp 15.000</strong></p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/cappucino.png" class="img-fluid">
                                         <p>Cappucino <br> <strong>Rp 5.000</strong></p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/redvelvet.png" class="img-fluid">
                                         <p>Red Velvet Latte <br> <strong>Rp 33.000</strong></p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/chocorum.png" class="img-fluid">
                                         <p>Choco Rum <br> <strong>Rp 28.000</strong></p>
                                     </div>        
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/blackforest.png" class="img-fluid">
                                         <p>Black Forest <br> <strong>Rp 30.000</strong></p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/chickenkatsu.png" class="img-fluid">
                                         <p>Chicken Katsu Dabu-dabu <br> <strong>Rp 60.000</strong></p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/salmon.png" class="img-fluid">
                                         <p>Salmon Truffle Teriyaki <br> <strong>Rp 60.000</strong></p>
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-6 col-md-4">
                                         <img src="assets/img/wiener.png" class="img-fluid">
                                         <p>Wiener Schnitzel <br> <strong>Rp 69.000</strong></p>
                                     </div>     
@@ -111,14 +87,53 @@
                     </div>
 
                 </div>
-                <div class="col-md-4 col-sm-12 aside">
-                    <h1>Cart</h1>
+                <div class="col-md-4 col-sm-12 aside align-bottom">
+                    <h1>Cart <span class="cart-num">3</span></h1>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./assets/img/latte.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-4 text-left">
+                            <p>Coffee Latte</p>
+                            <h3><i class="fa fa-minus-square-o" aria-hidden="true"></i>
+                                <span style="border: 1px solid;">1</span>
+                                <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                            </h3>
+                        </div><br>
+                        <div class="col-md-4">
+                            <p>Rp 15.000</p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./assets/img/latte.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-4 text-left">
+                            <p>Coffee Latte</p>
+                            <h3><i class="fa fa-minus-square-o" aria-hidden="true"></i>1<i class="fa fa-plus-square-o" aria-hidden="true"></i></h3>
+                        </div><br>
+                        <div class="col-md-4">
+                            <p>Rp 15.000</p>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="./assets/img/latte.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-4 text-left">
+                            <p>Coffee Latte</p>
+                            <h3><i class="fa fa-minus-square-o" aria-hidden="true"></i>1<i class="fa fa-plus-square-o" aria-hidden="true"></i></h3>
+                        </div>
+                        <div class="col-md-4">
+                            <p>Rp 15.000</p>
+                        </div> <br>
+                    </div><br>
                     
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn blue-btn btn-block" data-toggle="modal" data-target="#checkout-modal">
+                    <button type="button" class="align-bottom btn blue-btn btn-block" data-toggle="modal" data-target="#checkout-modal">
                         Checkout
                     </button> <br> <br>
-                    <button type="button" class="btn cancel-btn btn-block" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="align-bottom btn cancel-btn btn-block" data-toggle="modal" data-target="#exampleModal">
                         Cancel
                     </button>
                     
@@ -195,19 +210,19 @@
                         <form>
                             <div class="form-group row">
                               <label for="exampleFormControlInput1" class="col-sm-3">Name</label>
-                              <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                              <input class="form-control shadow col-sm-9" id="exampleFormControlInput1" placeholder="">
                             </div>
                             <div class="form-group row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Image</label>
-                                <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                                <input class="form-control shadow col-sm-9" id="exampleFormControlInput1" placeholder="">
                             </div>
                             <div class="form-group row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Price</label>
-                                <input class="form-control col-sm-7" id="exampleFormControlInput1" placeholder="">
+                                <input class="form-control shadow col-sm-7" id="exampleFormControlInput1" placeholder="">
                               </div>
                             <div class="form-group row">
                               <label class="col-sm-3"for="exampleFormControlSelect1">Category</label>
-                              <select class="col-sm-5 form-control" id="exampleFormControlSelect1">
+                              <select class="col-sm-5 form-control shadow" id="exampleFormControlSelect1">
                                 <option>Food</option>
                                 <option>Beverage</option>
                               </select>

@@ -15,18 +15,19 @@
     <title>POS App</title>
 </head>
 <body>
-    <header>
-        <a href="index.html" style="text-decoration: none; text-align: center !important; color: black;">
+    <header class="text-center shadow">
+        <a class="navbar-brand navbar"href="index.html" style="text-decoration: none; text-align: center !important; color: black;" class="shadow">
             <h2>History</h2>
         </a>
+        
     </header>
 
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-1 col-sm-12 text-center">
+                <div class="col-md-1 col-sm-12 text-center shadow">
                     <button type="button" class="btn">
-                        <a href=""><img src="./assets/img/fork.png" alt=""></a>
+                        <a href="addtocart.html"><img src="./assets/img/fork.png" alt=""></a>
                     </button>
                     <button type="button" class="btn">
                         <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
@@ -36,8 +37,8 @@
                     </button><br>
                 </div>
                 <div class="col-md-11 col-sm-12">
-                    <div class="container-fluid">
-                        <div class="row" style="font-weight: bold;">
+                    <div class="container">
+                        <div class="row col-md-12 mx-auto" style="font-weight: bold;">
                             <div style="background-image: url(./assets/img/pink.png);" class="card col-md-3 mx-auto">
                                 <p>Today's income</p>
                                 <p style="font-size: 150%;">Rp. 1.000.000</p>
@@ -54,32 +55,34 @@
                                 <p>+10% Last Year</p>
                             </div>
                         </div>
-                        <div class=" col-sm-8 col-md-12 h-75 graph">
-                            <h1>Revenue</h1>
-                            <canvas id="myChart"></canvas>
-                        </div>
-                        <div class="col-sm-8 col-md-12">
-                            <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Invoice</th>
-                                    <th scope="col">Cashier</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Orders</th>
-                                    <th scope="col">Amount</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>#10289</td>
-                                    <td>Cashier 1</td>
-                                    <td>28 October 2019</td>
-                                    <td>Ice Tea, Salad</td>
-                                    <td>Rp 120.000</td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                        </div>
+                        
+                    </div><br>
+                    <div class="col-md-11 shadow w-80 my-auto mx-auto p-100">
+                        <h1>Revenue</h1>
+                        <canvas id="myChart" style="height: 300px;"></canvas>
+                    </div>  <br>
+                    <div class="col-md-11 my-auto mx-auto shadow">
+                        <h1>Recent Order</h1>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Invoice</th>
+                                <th scope="col">Cashier</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Orders</th>
+                                <th scope="col">Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>#10289</td>
+                                <td>Cashier 1</td>
+                                <td>28 October 2019</td>
+                                <td>Ice Tea, Salad</td>
+                                <td>Rp 120.000</td>
+                              </tr>
+                            </tbody>
+                          </table>
                     </div>
                 </div>
             </div>
@@ -97,19 +100,19 @@
                         <form>
                             <div class="form-group row">
                               <label for="exampleFormControlInput1" class="col-sm-3">Name</label>
-                              <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                              <input class="form-control shadow col-sm-9" id="exampleFormControlInput1" placeholder="">
                             </div>
                             <div class="form-group row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Image</label>
-                                <input class="form-control col-sm-9" id="exampleFormControlInput1" placeholder="">
+                                <input class="form-control shadow col-sm-9" id="exampleFormControlInput1" placeholder="">
                             </div>
                             <div class="form-group row">
                                 <label for="exampleFormControlInput1" class="col-sm-3">Price</label>
-                                <input class="form-control col-sm-7" id="exampleFormControlInput1" placeholder="">
+                                <input class="form-control shadow col-sm-7" id="exampleFormControlInput1" placeholder="">
                               </div>
                             <div class="form-group row">
                               <label class="col-sm-3"for="exampleFormControlSelect1">Category</label>
-                              <select class="col-sm-5 form-control" id="exampleFormControlSelect1">
+                              <select class="col-sm-5 form-control shadow" id="exampleFormControlSelect1">
                                 <option>Food</option>
                                 <option>Beverage</option>
                               </select>
