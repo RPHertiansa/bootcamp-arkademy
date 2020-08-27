@@ -1,14 +1,16 @@
-# Tugas Minggu 4
+# Week 4 Task
 
 ## Food POS App
-Mendesain tampilan web berdasarkan desain mock-up yang sudah tersedia(Web Slicing). CSS Framework yang digunakan adalah bootstrap. Terdapat pembuatan grafik menggunakan ChartJS
-[Klik untuk melihat](https://food-pos.netlify.app/)
+Designing a Point of Sales Web App from a mock-up design(web slicing). This is done using html, css, and bootstrap as the css framework. There is a bit of javascript for DOM manipulation.
+Overall, this app has 3 display, Home, Add to Cart, and Dashboard. Both Home and Add to Cart page have similar interface, sidebar menu, header, product column, and cart column. It also has modal for adding a product. Dashboard page is made using ChartJS for the sales graph.
+This app is just for a display, it does not have many function just yet.
+[Click to see](https://food-pos.netlify.app/)
 
 ## HTML
-Adalah bahasa mark-up untuk menampilkan sesuatu ke dalam web. HTML bukan merupakan bahasa pemrograman karena tidak terdapat logika di dalamnya. Terdapat tag-tag khusus untuk setiap elemennya
+is a mark-up language for displaying something to website. HTML is not a programming language as it does not perform logic in it. There are several tags for several elements in HTML. Latest version of HTML is HTML 5.
 
 ## CSS
-Adalah bahasa untuk mengatur style pada html. Terdapat 3 cara penggunaan, eksternal, internal, dan inline
+is a styling language for HTML. HTML in its essence is just bunch of sentence and pictures, to make it stylish, it needs CSS. There are 3 ways of using CSS, inline, internal, and External. Latest version of CSS is CSS 3.
 
 ## Bootstrap
-Adalah framework CSS yang digunakan untuk mempermudah styling pada web dengan menyederhanakan properti css menjadi class pada html
+is a CSS framework to ease the use of styling. It has several classes to be used in html so it simplify the  use of css properties.

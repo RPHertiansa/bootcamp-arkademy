@@ -7,32 +7,30 @@
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <title>POS App</title>
+    <title>Add to Cart</title>
 </head>
 <body>
     <main>
         
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-8 float-none">
                     
                     <div class="row">
-                        <div class="col-md-12 col-sm-6 shadow row text-center">
-                            <a class="navbar-brand navbar text-center" href="index.html" style="text-decoration: none; text-align: center !important; color: black;" class="shadow">
+                        <div class="container-fluid col-md-12 col-sm-6 shadow row" >
+                            <a class="navbar-brand navbar" href="index.html" style="text-decoration: none; text-align: center !important; color: black;" class="shadow">
                                 <h2><strong>Food Item</strong></h2>
                             </a>
                             <i class="fa fa-search fa-2x ml-auto my-auto" aria-hidden="true"></i>  
                         </div>
                        
-                        <div class="col-md-1 col-sm-6 shadow text-left">
-                            <button type="button" class="btn">
-                                <a href="addtocart.html"><img src="./assets/img/fork.png" alt=""></a>
-                            </button>
-                            <button type="button" class="btn">
-                                <a href="graph.html"><img src="./assets/img/clipboard.png" alt=""></a>
-                            </button>
+                        <div class="col-md-1 col-sm-6 shadow text-center">
+                            <br>
+                        <a href="addtocart.html"><img src="./assets/img/fork.png" style="margin-bottom: 20px !important;" alt=""></a>
+                        <a href="graph.html"><img src="./assets/img/clipboard.png" style="margin-bottom: 20px !important;" alt=""></a>
+                            
                             <button type="button" class="btn" data-toggle="modal" data-target="#add-item-modal">
-                                <i class="fa fa-plus fa-3x" style="color: green;" aria-hidden="true"></i>
+                                <i class="fa fa-plus fa-3x" style="color: green; margin-left: -5px!important; margin-bottom: 20px !important;" aria-hidden="true"></i>
                             </button><br>
                         </div>
                         <div class="col-md-11 col-sm-12 product">
@@ -92,54 +90,75 @@
 
                 </div>
                 <div class="col-md-4 col-sm-12 aside align-bottom shadow">
-                    <h1>Cart <span class="cart-num">3</span></h1>
-                    <div class="row">
-                        <div class="col-md-4">
+                    <h2>Cart <span class="cart-num">3</span></h2> <br>
+                    <div class="row" style="font-weight: bold;" >
+                        <div class="col-md-4 col-sm-4 col-4">
                             <img src="./assets/img/latte.png" alt="" class="img-fluid">
                         </div>
-                        <div class="col-md-4 text-left">
+                        <div class="col-md-4 col-sm-4 col-4 text-left">
                             <p>Coffee Latte</p>
-                            <h3><i class="fa fa-minus-square-o" aria-hidden="true"></i>
-                                <span style="border: 1px solid;">1</span>
-                                <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-                            </h3>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-success cart-button"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-outline-success">1</button>
+                                <button type="button" class="btn btn-outline-success cart-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
                         </div><br>
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-4 col-4">
                             <p>Rp 15.000</p>
                         </div>
                     </div><br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="./assets/img/latte.png" alt="" class="img-fluid">
+                    <div class="row" style="font-weight: bold;">
+                        <div class="col-md-4 col-sm-4 col-4">
+                            <img src="./assets/img/blackforest.png" alt="" class="img-fluid">
                         </div>
-                        <div class="col-md-4 text-left">
-                            <p>Coffee Latte</p>
-                            <h3><i class="fa fa-minus-square-o" aria-hidden="true"></i>1<i class="fa fa-plus-square-o" aria-hidden="true"></i></h3>
+                        <div class="col-md-4 col-sm-4 col-4 text-left">
+                            <p>Black Forest</p>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-success cart-button"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-outline-success">1</button>
+                                <button type="button" class="btn btn-outline-success cart-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
                         </div><br>
-                        <div class="col-md-4">
-                            <p>Rp 15.000</p>
+                        <div class="col-md-4 col-sm-4 col-4">
+                            <p>Rp 30.000</p>
                         </div>
                     </div><br>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <img src="./assets/img/latte.png" alt="" class="img-fluid">
+                    <div class="row" style="font-weight: bold;">
+                        <div class="col-md-4 col-sm-4 col-4">
+                            <img src="./assets/img/salmon.png" alt="" class="img-fluid">
                         </div>
-                        <div class="col-md-4 text-left">
-                            <p>Coffee Latte</p>
-                            <h3><i class="fa fa-minus-square-o" aria-hidden="true"></i>1<i class="fa fa-plus-square-o" aria-hidden="true"></i></h3>
+                        <div class="col-md-4 col-sm-4 col-4 text-left">
+                            <p>Salmon Truffle</p>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button type="button" class="btn btn-outline-success cart-button"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                <button type="button" class="btn btn-outline-success">1</button>
+                                <button type="button" class="btn btn-outline-success cart-button"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <p>Rp 15.000</p>
+                        <div class="col-md-4 col-sm-4 col-4">
+                            <p>Rp 60.000</p>
                         </div> <br>
                     </div><br>
+
+                    <div class="row align-bottom" style="font-weight: bold;" >
+                        <div class="col-md-8 col-sm-4 col-4 text-left">
+                            <p>Total:</p>
+                            <p style="text-decoration: none !important;">Belum termasuk PPN</p>
+                        </div><br>
+                        <div class="col-md-4 col-sm-4 col-4">
+                            <p>Rp 105.000*</p>
+                        </div>
+                    </div>
                     
                     <!-- Button trigger modal -->
-                    <button type="button" class="align-bottom btn blue-btn btn-block" data-toggle="modal" data-target="#checkout-modal">
-                        Checkout
-                    </button> <br> <br>
-                    <button type="button" class="align-bottom btn cancel-btn btn-block" data-toggle="modal" data-target="#exampleModal">
-                        Cancel
-                    </button>
+                    
+                        <button type="button" class="btn blue-btn btn-block align-bottom" data-toggle="modal" data-target="#checkout-modal">
+                            Checkout
+                        </button> <br> <br>
+                        <button type="button" class="btn cancel-btn btn-block" data-toggle="modal" data-target="#exampleModal">
+                            Cancel
+                        </button>
+                    
                     
                     
                 </div>

@@ -52,14 +52,13 @@
 }
 .cart-num {
     
-    padding: 5px 10px !important;
+    padding: 1px 10px !important;
+   
+    
     background-color: turquoise !important;
     border-radius: 50% !important;
     
    
-}
-.container {
-    justify-content: center !important;
 }
 
 .checked {
@@ -71,4 +70,8 @@
     z-index: 5;
     
     
+}
+
+.cart-button{
+    background-color: rgba(130, 222, 58, 0.2) !important;    
 }
