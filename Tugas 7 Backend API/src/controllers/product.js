@@ -11,7 +11,18 @@ const product = {
         .catch((err) => {
             failed(res, [], err.message)
         })
+    },
+    insert: (req, res) => {
+        const body = req.body
+        productModel.insert(body)
+        .then((result) => {
+            success(res, result, 'Insert product success')
+        })
+        .catch((err) => {
+            failed(res, [], err.message)
+        })
     }
+    
 }
 
 module.exports = product

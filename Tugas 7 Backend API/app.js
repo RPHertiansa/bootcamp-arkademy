@@ -10,3 +10,5 @@ app.listen(port, () => {
 });
 
 app.use('/product', productRouter)
+app.use(bodyParser.urlencoded({ extended: false}))
+app.use(bodyParser.json())
