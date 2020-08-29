@@ -21,6 +21,17 @@ const product = {
         .catch((err) => {
             failed(res, [], err.message)
         })
+    },
+
+    delete: (req, res) => {
+        const id = req.params.id
+        productModel.delete(id)
+        .then((result) => {
+            success(res, result, 'Product is deleted!')
+        })
+        .catch((err) => {
+            failed(res, [], err.message)
+        })
     }
     
 }

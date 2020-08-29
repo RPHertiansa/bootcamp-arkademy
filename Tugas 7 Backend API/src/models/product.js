@@ -16,9 +16,20 @@ const product = {
 
     insert: (data) => {
         return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO product ('name', 'category', 'price')
-            VALUES ('${data.name}', '${data.category}', '${data.price}')`, (err, result) => {
+            db.query(`INSERT INTO product ('name',category','price')
+            VALUES ('${data.name}', '${data.category}', '${data.price}')`, (err,result) => {
                 if(err) {
+                    reject(new Error(err))
+                } else {
+                    resolve(result)
+                }
+            })
+        })
+    },
+    delete: (id) => {
+        return new Promise((resolve, reject) => {
+            db.query(`DELETE FROM product WHERE id=${id}`, (err, result) =>{
+                if(err){
                     reject(new Error(err))
                 } else {
                     resolve(result)
