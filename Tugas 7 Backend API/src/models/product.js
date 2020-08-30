@@ -25,8 +25,34 @@ const product = {
         })
     },
 
-    update: (id) => {
+    insert: (data) => {
+        return new Promise((resolve, reject) => {
+            db.query(`INSERT INTO product ('name', 'category', 'price')
+            VALUES ('${data.name}', '${data.category}', '${data.price}')`, (err, result) => {
+                if(err){
+                    reject(new Error(err))
+                } else {
+                    resolve(result)
+                }
+            } )
+        })
+    },
 
+    update: (id) => {
+        return new Promise((resolve, reject) => {
+            db.query(`UPDATE product SET
+            name='${data.name}',
+            category='${data.category}',
+            price='${data.price}' 
+            WHERE id='${id}'`,
+            (err, result) => {
+                if(err){
+                    reject(new Error(err))
+                } else {
+                    resolve(result)
+                }
+            })
+        })
     },
 
     delete: (id) => {

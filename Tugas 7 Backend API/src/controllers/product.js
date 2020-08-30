@@ -22,6 +22,16 @@ const product = {
             failed(res, [], err.message)
         })
     },
+    insert: (req,res) => {
+        const body = req.body
+        productModel.insert(body)
+        .then((result) => {
+            success(res, result, 'Product is inserted')
+        })
+        .catch((err) =>{
+            failed(res, [], err.message)
+        })
+    },
     update: (req,res) => {
         const id = req.params.id
         const body = req.body
