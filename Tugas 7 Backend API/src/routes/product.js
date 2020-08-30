@@ -5,7 +5,7 @@ const router = express.Router();
 
 router
     .get('/getall', productController.getAll)
-    .post('/insert', productController.insert)
+    .get('/getdetail/:id', productController.getDetail)
     .delete('/delete/:id', productController.delete)
 
 module.exports = router;

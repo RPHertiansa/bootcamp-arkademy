@@ -12,17 +12,27 @@ const product = {
             failed(res, [], err.message)
         })
     },
-    insert: (req, res) => {
-        const body = req.body
-        productModel.insert(body)
+    getDetail: (req, res) => {
+        const id = req.params.id
+        productModel.getDetail(id)
         .then((result) => {
-            success(res, result, 'Insert product success')
+            success(res, result, "Here is the product you search")
         })
         .catch((err) => {
             failed(res, [], err.message)
         })
     },
-
+    update: (req,res) => {
+        const id = req.params.id
+        const body = req.body
+        productModel.update(body, id)
+        .then((result) => {
+            success(res, result, 'Product is updated')
+        })
+        .catch((err) => {
+            failed(res, [], err.message)
+        })
+    },
     delete: (req, res) => {
         const id = req.params.id
         productModel.delete(id)

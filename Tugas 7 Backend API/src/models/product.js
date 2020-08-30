@@ -13,12 +13,10 @@ const product = {
             })
         })
     },
-
-    insert: (data) => {
+    getDetail: (id) => {
         return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO product ('name',category','price')
-            VALUES ('${data.name}', '${data.category}', '${data.price}')`, (err,result) => {
-                if(err) {
+            db.query(`SELECT * FROM product WHERE id='${id}'`, (err, result) => {
+                if(err){
                     reject(new Error(err))
                 } else {
                     resolve(result)
@@ -26,9 +24,14 @@ const product = {
             })
         })
     },
+
+    update: (id) => {
+
+    },
+
     delete: (id) => {
         return new Promise((resolve, reject) => {
-            db.query(`DELETE FROM product WHERE id=${id}`, (err, result) =>{
+            db.query(`DELETE FROM product WHERE id='${id}'`, (err, result) =>{
                 if(err){
                     reject(new Error(err))
                 } else {
