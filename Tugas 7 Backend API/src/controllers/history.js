@@ -1,22 +1,22 @@
-const productModel = require('../models/product');
+const historyModel = require('../models/history');
 const {success, failed} = require('../helpers/response')
 
-const product = {
+const history = {
     getAll: (req, res) => {
-        const name = !req.query.name ? '' : req.query.name
-        productModel.getAll(name)
+        const cashier = !req.query.cashier ? '' : req.query.cashier
+        historyModel.getAll(cashier)
         .then((result) => {
-            success(res, result, 'Get all product success')
+            success(res, result, 'Get all history success')
         })
         .catch((err) => {
             failed(res, [], err.message)
         })
     },
     getDetail: (req, res) => {
-        const id = req.params.id
-        productModel.getDetail(id)
+        const invoice_id = req.params.invoice_id
+        historyModel.getDetail(invoice_id)
         .then((result) => {
-            success(res, result, "Here is the product you search")
+            success(res, result, "Here is the history you search")
         })
         .catch((err) => {
             failed(res, [], err.message)
@@ -24,30 +24,30 @@ const product = {
     },
     insert: (req,res) => {
         const body = req.body
-        productModel.insert(body)
+        historyModel.insert(body)
         .then((result) => {
-            success(res, result, 'Product is inserted')
+            success(res, result, 'history is inserted')
         })
         .catch((err) =>{
             failed(res, [], err.message)
         })
     },
     update: (req,res) => {
-        const id = req.params.id
+        const invoice_id = req.params.invoice_id
         const body = req.body
-        productModel.update(body, id)
+        historyModel.update(body, invoice_id)
         .then((result) => {
-            success(res, result, 'Product is updated')
+            success(res, result, 'history is updated')
         })
         .catch((err) => {
             failed(res, [], err.message)
         })
     },
     delete: (req, res) => {
-        const id = req.params.id
-        productModel.delete(id)
+        const invoice_id = req.params.invoice_id
+        historyModel.delete(invoice_id)
         .then((result) => {
-            success(res, result, 'Product is deleted!')
+            success(res, result, 'history is deleted!')
         })
         .catch((err) => {
             failed(res, [], err.message)
@@ -56,4 +56,4 @@ const product = {
     
 }
 
-module.exports = product
+module.exports = history

@@ -1,20 +1,20 @@
 const db = require('../configs/db');
 
-const product = {
-    getAll: (name) => {
+const history = {
+    getAll: (cashier) => {
         return new Promise((resolve, reject) => {
-          db.query(`SELECT * FROM product WHERE name LIKE '%${name}%' LIMIT 5`, (err, result) => {
+          db.query(`SELECT * FROM history WHERE cashier LIKE '%${cashier}%' LIMIT 5`, (err, result) => {
             if(err){
               reject(new Error(err))
-            } else {
+            }else{
               resolve(result)
             }
           })
         })
       },
-    getDetail: (id) => {
+    getDetail: (invoice_id) => {
         return new Promise((resolve, reject) => {
-            db.query(`SELECT * FROM product WHERE id='${id}'`, (err, result) => {
+            db.query(`SELECT * FROM history WHERE invoice_id='${invoice_id}'`, (err, result) => {
                 if(err){
                     reject(new Error(err))
                 } else {
@@ -26,8 +26,8 @@ const product = {
 
     insert: (data) => {
         return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO product ('name', 'category', 'price')
-            VALUES ('${data.name}', '${data.category}', '${data.price}')`, (err, result) => {
+            db.query(`INSERT INTO history ('cashier', 'date', 'orders' , 'amount' )
+            VALUES ('${data.cashier}', '${data.date}', '${data.orders}', '${data.amount}')`, (err, result) => {
                 if(err){
                     reject(new Error(err))
                 } else {
@@ -39,10 +39,11 @@ const product = {
 
     update: (data, id) => {
         return new Promise((resolve, reject) => {
-            db.query(`UPDATE product SET
-            name='${data.name}',
-            category='${data.category}',
-            price='${data.price}' 
+            db.query(`UPDATE history SET
+            cashier='${data.cashier}',
+            date='${data.date}',
+            orders='${data.orders}',
+            amount='${data.amount}' 
             WHERE id='${id}'`,
             (err, result) => {
                 if(err){
@@ -56,7 +57,7 @@ const product = {
 
     delete: (id) => {
         return new Promise((resolve, reject) => {
-            db.query(`DELETE FROM product WHERE id='${id}'`, (err, result) =>{
+            db.query(`DELETE FROM history WHERE id='${id}'`, (err, result) =>{
                 if(err){
                     reject(new Error(err))
                 } else {
@@ -67,4 +68,4 @@ const product = {
     }
 }
 
-module.exports = product
+module.exports = history
