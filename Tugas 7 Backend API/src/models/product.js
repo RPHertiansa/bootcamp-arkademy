@@ -24,6 +24,18 @@ const product = {
         })
     },
 
+    getCategory: (category) => {
+        return new Promise((resolve, reject) => {
+            db.query(`SELECT * FROM product WHERE category='${category}' ORDER BY price`, (err, result) => {
+                if(err){
+                    reject(new Error(err))
+                } else {
+                    resolve(result)
+                }
+            })
+        })  
+    },
+
     insert: (data) => {
         return new Promise((resolve, reject) => {
             db.query(`INSERT INTO product ('name', 'category', 'price')

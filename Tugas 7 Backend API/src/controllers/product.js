@@ -16,7 +16,18 @@ const product = {
         const id = req.params.id
         productModel.getDetail(id)
         .then((result) => {
-            success(res, result, "Here is the product you search")
+            success(res, result, `Here is the product with id=${id} that you search`)
+        })
+        .catch((err) => {
+            failed(res, [], err.message)
+        })
+    },
+
+    getCategory: (req, res) => {
+        const category = req.params.category
+        productModel.getCategory(category)
+        .then((result) => {
+            success(res, result, `Here is the list of ${category} from the menu`)
         })
         .catch((err) => {
             failed(res, [], err.message)
@@ -26,7 +37,7 @@ const product = {
         const body = req.body
         productModel.insert(body)
         .then((result) => {
-            success(res, result, 'Product is inserted')
+            success(res, result, `Product is inserted`)
         })
         .catch((err) =>{
             failed(res, [], err.message)
@@ -37,7 +48,7 @@ const product = {
         const body = req.body
         productModel.update(body, id)
         .then((result) => {
-            success(res, result, 'Product is updated')
+            success(res, result, `Product with id=${id} is updated`)
         })
         .catch((err) => {
             failed(res, [], err.message)
@@ -47,7 +58,7 @@ const product = {
         const id = req.params.id
         productModel.delete(id)
         .then((result) => {
-            success(res, result, 'Product is deleted!')
+            success(res, result, `Product with id=${id} is deleted`)
         })
         .catch((err) => {
             failed(res, [], err.message)
