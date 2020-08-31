@@ -35,6 +35,7 @@ const product = {
     },
     insert: (req,res) => {
         const body = req.body
+        
         productModel.insert(body)
         .then((result) => {
             success(res, result, `Product is inserted`)

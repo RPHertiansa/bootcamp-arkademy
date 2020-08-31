@@ -26,7 +26,7 @@ const history = {
 
     insert: (data) => {
         return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO history ('cashier', 'date', 'orders' , 'amount' )
+            db.query(`INSERT INTO history (cashier, date, orders, amount)
             VALUES ('${data.cashier}', '${data.date}', '${data.orders}', '${data.amount}')`, (err, result) => {
                 if(err){
                     reject(new Error(err))

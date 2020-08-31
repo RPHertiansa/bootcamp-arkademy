@@ -10,7 +10,7 @@ app.listen(port, () => {
     console.log(`app is running on localhost port ${port}`)
 });
 
-app.use('/product', productRouter)
-app.use('/history', historyRouter)
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json())
+app.use('/product', productRouter)
+app.use('/history', historyRouter)

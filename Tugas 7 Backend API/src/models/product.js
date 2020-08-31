@@ -3,7 +3,7 @@ const db = require('../configs/db');
 const product = {
     getAll: (name) => {
         return new Promise((resolve, reject) => {
-          db.query(`SELECT * FROM product WHERE name LIKE '%${name}%' LIMIT 5`, (err, result) => {
+          db.query(`SELECT * FROM product WHERE name LIKE '%${name}%'`, (err, result) => {
             if(err){
               reject(new Error(err))
             } else {
@@ -38,7 +38,7 @@ const product = {
 
     insert: (data) => {
         return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO product ('name', 'category', 'price')
+            db.query(`INSERT INTO product (name, category, price)
             VALUES ('${data.name}', '${data.category}', '${data.price}')`, (err, result) => {
                 if(err){
                     reject(new Error(err))
