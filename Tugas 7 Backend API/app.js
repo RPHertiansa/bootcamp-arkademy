@@ -2,12 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const productRouter = require('./src/routes/product')
 const historyRouter = require('./src/routes/history')
-const port = 3003;
+const { PORT } = require('./src/helpers/env')
 
 const app = express();
 
-app.listen(port, () => {
-    console.log(`app is running on localhost port ${port}`)
+app.listen(PORT, () => {
+    console.log(`app is running on localhost port ${PORT}`)
 });
 
 app.use(bodyParser.urlencoded({ extended: false}))
