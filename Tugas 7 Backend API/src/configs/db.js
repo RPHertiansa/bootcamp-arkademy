@@ -5,6 +5,6 @@ const connection = mysql.createConnection({
     host: DB_HOST,
     user: DB_USER,
     database: DB_NAME
-})
+});
 
 module.exports = connection; //exporting connection as module

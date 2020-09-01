@@ -1,6 +1,7 @@
 const express = require('express');
 const productController = require('../controllers/product')
 
+const upload = require('../helpers/upload')
 const router = express.Router();
 
 router

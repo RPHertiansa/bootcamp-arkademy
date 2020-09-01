@@ -4,7 +4,10 @@ const {success, failed} = require('../helpers/response')
 const product = {
     getAll: (req, res) => {
         const name = !req.query.name ? '' : req.query.name
-        productModel.getAll(name)
+        const limit = !req.query.limit ? 2 : parseInt(req.query.limit)
+        const page = !req.query.page ? 1 : parseInt(req.query.page)
+        const offset = page === 1 ? 0 : (page-1)*limit
+        productModel.getAll(name, limit, offset)
         .then((result) => {
             success(res, result, 'Get all product success')
         })
