@@ -58,6 +58,7 @@ const product = {
     update: (req,res) => {
         const id = req.params.id
         const body = req.body
+        body.image = req.file.filename
         productModel.update(body, id)
         .then((result) => {
             success(res, result, `Product with id=${id} is updated`)

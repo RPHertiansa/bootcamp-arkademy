@@ -1,9 +1,9 @@
 const db = require('../configs/db');
 
-const history = {
-    getAll: (cashier) => {
+const category = {
+    getAll: (category) => {
         return new Promise((resolve, reject) => {
-          db.query(`SELECT * FROM history WHERE cashier LIKE '%${cashier}%' LIMIT 5`, (err, result) => {
+          db.query(`SELECT * FROM category WHERE category LIKE '%${category}%' LIMIT 5`, (err, result) => {
             if(err){
               reject(new Error(err))
             }else{
@@ -12,9 +12,9 @@ const history = {
           })
         })
       },
-    getDetail: (invoice_id) => {
+    getDetail: (id) => {
         return new Promise((resolve, reject) => {
-            db.query(`SELECT * FROM history WHERE invoice_id='${invoice_id}'`, (err, result) => {
+            db.query(`SELECT * FROM category WHERE id='${id}'`, (err, result) => {
                 if(err){
                     reject(new Error(err))
                 } else {
@@ -26,8 +26,8 @@ const history = {
 
     insert: (data) => {
         return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO history (cashier, orders, amount)
-            VALUES ('${data.cashier}', '${data.orders}', '${data.amount}')`, (err, result) => {
+            db.query(`INSERT INTO category (category)
+            VALUES ('${data.category}')`, (err, result) => {
                 if(err){
                     reject(new Error(err))
                 } else {
@@ -39,11 +39,7 @@ const history = {
 
     update: (data, id) => {
         return new Promise((resolve, reject) => {
-            db.query(`UPDATE history SET
-            cashier='${data.cashier}',
-            orders='${data.orders}',
-            amount='${data.amount}' 
-            WHERE id='${id}'`,
+            db.query(`UPDATE category SET category='${data.category}' WHERE id='${id}'`,
             (err, result) => {
                 if(err){
                     reject(new Error(err))
@@ -56,7 +52,7 @@ const history = {
 
     delete: (id) => {
         return new Promise((resolve, reject) => {
-            db.query(`DELETE FROM history WHERE id='${id}'`, (err, result) =>{
+            db.query(`DELETE FROM category WHERE id='${id}'`, (err, result) =>{
                 if(err){
                     reject(new Error(err))
                 } else {
@@ -67,4 +63,4 @@ const history = {
     }
 }
 
-module.exports = history
+module.exports = category
