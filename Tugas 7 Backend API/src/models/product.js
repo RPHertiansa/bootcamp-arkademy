@@ -3,7 +3,7 @@ const db = require('../configs/db');
 const product = {
     getAll: (name, limit, offset) => {
         return new Promise((resolve, reject) => {
-          db.query(`SELECT * FROM product WHERE name LIKE '%${name}%' LIMIT ${offset}, ${limit}`, (err, result) => {
+          db.query(`SELECT *, (SELECT COUNT(*) FROM product) AS count FROM product WHERE name LIKE '%${name}%' LIMIT ${offset}, ${limit}`, (err, result) => {
             if(err){
               reject(new Error(err))
             } else {
@@ -38,8 +38,8 @@ const product = {
 
     insert: (data) => {
         return new Promise((resolve, reject) => {
-            db.query(`INSERT INTO product (name, category, price)
-            VALUES ('${data.name}', '${data.category}', '${data.price}')`, (err, result) => {
+            db.query(`INSERT INTO product (name, price, image, category_id)
+            VALUES ('${data.name}', '${data.price}', '${data.image}', '${data.category_id}')`, (err, result) => {
                 if(err){
                     reject(new Error(err))
                 } else {

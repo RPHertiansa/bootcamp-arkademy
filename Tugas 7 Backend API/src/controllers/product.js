@@ -1,5 +1,5 @@
 const productModel = require('../models/product');
-const {success, failed} = require('../helpers/response')
+const {success, failed, successWithMeta} = require('../helpers/response')
 
 const product = {
     getAll: (req, res) => {
@@ -9,7 +9,13 @@ const product = {
         const offset = page === 1 ? 0 : (page-1)*limit
         productModel.getAll(name, limit, offset)
         .then((result) => {
-            success(res, result, 'Get all product success')
+            const totalData = result[0].count
+            const meta = {
+                totalData,
+                totalPage: Math.ceil(totalData/limit),
+                currentPage: page
+            }
+            successWithMeta(res, result, meta, 'Get all product success')
         })
         .catch((err) => {
             failed(res, [], err.message)
@@ -38,7 +44,9 @@ const product = {
     },
     insert: (req,res) => {
         const body = req.body
+        body.image = req.file.filename
         
+
         productModel.insert(body)
         .then((result) => {
             success(res, result, `Product is inserted`)
