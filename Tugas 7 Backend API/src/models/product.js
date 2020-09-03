@@ -1,9 +1,9 @@
 const db = require('../configs/db');
 
 const product = {
-    getAll: (name, limit, offset) => {
+    getAll: (name, sort, type, limit, offset) => {
         return new Promise((resolve, reject) => {
-          db.query(`SELECT product.*, category.category, (SELECT COUNT(*) FROM product) AS count FROM product INNER JOIN category on product.category_id = category.id WHERE name LIKE '%${name}%' LIMIT ${offset}, ${limit}`, (err, result) => {
+          db.query(`SELECT product.*, category.category, (SELECT COUNT(*) FROM product) AS count FROM product INNER JOIN category on product.category_id = category.id WHERE name LIKE '%${name}%' ORDER BY ${sort} ${type} LIMIT ${offset},${limit}`, (err, result) => {
             if(err){
               reject(new Error(err))
             } else {
@@ -53,9 +53,9 @@ const product = {
         return new Promise((resolve, reject) => {
             db.query(`UPDATE product SET
             name='${data.name}',
-            category='${data.category}',
+            category_id='${data.category_id}',
             price='${data.price}',
-            image='${data.image}', 
+            image='${data.image}'
             WHERE id='${id}'`,
             (err, result) => {
                 if(err){
