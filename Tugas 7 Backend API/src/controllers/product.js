@@ -10,7 +10,7 @@ const product = {
             const limit = !req.query.limit ? 5 : parseInt(req.query.limit)
             const page = !req.query.page ? 1 : parseInt(req.query.page)
             const offset = page === 1 ? 0 : (page-1)*limit
-            productModel.getAll(name, limit, offset)
+            productModel.getAll(name, sort, type, limit, offset)
             .then((result) => {
                 const totalData = result[0].count
                 const meta = {
