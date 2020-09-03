@@ -56,7 +56,7 @@ const history = {
                 failed(res, [], err.message)
             })    
         } catch (error) {
-            
+            failed(res, [], 'Internal server error!')
         }
     },
     delete: (req, res) => {

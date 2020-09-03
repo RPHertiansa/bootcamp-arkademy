@@ -7,7 +7,7 @@ router
     .get('/getall', historyController.getAll)
     .get('/getdetail/:invoice_id', historyController.getDetail)
     .post('/insert', historyController.insert)
-    .put('/update/:id', historyController.update)
-    .delete('/delete/:id', historyController.delete)
+    .put('/update/:invoice_id', historyController.update)
+    .delete('/delete/:invoice_id', historyController.delete)
 
 module.exports = router;
