@@ -10,3 +10,4 @@ Tugas bootcamp Arkademy
 - Tugas 5 : Code implement (logic)
 - Tugas 6 : Responsive Web (HTML, CSS, Bootstrap)
 - Tugas 7 : Backend 1 (API)
+- Tugas 8 : VueJS (integrating with API)
